@@ -1,107 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <input type="checkbox" id="check">
-    <label for="check" class="🍔"></label>
-        <div></div>
-        <div></div>
-        <div></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="checkbox" id="check" class="please">
+  <label for="check" class="hhh">
+    <div class="burger"></div>
+    <div class="burger"></div>
+    <div class="burger"></div>
+    <ul class="nav">
+      <li><a href="#one">1</a></li>
+      <li><a href="#two">2</a></li>
+      <li><a href="#three">3</a></li>
+      <li><a href="#four">4</a></li>
+      <li><a href="#five">5</a></li>
+      <li><a href="#six">6</a></li>
+      <li><a href="#seven">7</a></li>
+      <li><a href="#eight">8</a></li>
+    </ul>
   </label>
   </div>
-    <section class="section section1">
-      <h1>NICKS</h1>
-      <h1>CHECKBOX EXTRAVAGANZA</h1>
-    </section>
-    <section class="section section2">
-      <h1>Im nick</h1>
-      <h1>I love css</h1>
-    </section>
-    <section class="section section3">
-      <section class="s3-box">
-        <h2>
-          these are checkboxes<img src="./assets/play-button.svg" alt="" />
-        </h2>
-        <h2>
-          <img src="./assets/play-button.svg" alt="" /> these are radio-buttons
-        </h2>
-        <form class="checkboxes">
-          <input type="checkbox" name="checkbox" id="" />
-          <input type="checkbox" name="checkbox" id="" />
-          <input type="checkbox" name="checkbox" id="" />
-          <input type="checkbox" name="checkbox" id="" />
-          <input type="checkbox" name="checkbox" id="" />
-          <hr />
-          <input type="radio" name="checkbox" id="" />
-          <input type="radio" name="checkbox" id="" />
-          <input type="radio" name="checkbox" id="" />
-          <input type="radio" name="checkbox" id="" />
-          <input type="radio" name="checkbox" id="" />
-          <input type="radio" name="checkbox" id="" />
-        </form>
-      </section>
-      <div class="managing-state">
-        <h3>
-          These are basic HTML elements that have the ability to manage state on
-          your website
-        </h3>
-        <p>
-          When the you click on a checkbox, it gains the state of
-          <span>checked</span>. When it you click it again, it
-          <span>loses</span> that state
-        </p>
-        <p>
-          Radio buttons are a little different, where if they share the same
-          name, only one radio button can have the state of checked at a time
-        </p>
-      </div>
-    </section>
-    <section class="section section4">
+  <section class="section section1" id="one">
+    <h1>NICKS</h1>
+    <h1>CHECKBOX EXTRAVAGANZA</h1>
+  </section>
+  <section class="section section2" id="two">
+    <h1>Im nick</h1>
+    <h1>I love css</h1>
+  </section>
+  <section class="section section3" id="three">
+    <section class="s3-box">
       <h2>
-        You can then use the pseudo-selector <span>:checked</span> to modify
-        elements when your checkbox is checked!
+        these are checkboxes<img src="./assets/play-button.svg" alt="" />
       </h2>
-      <div class="s4cb-box">
-        <input type="checkbox" class="section4-checkbox" />
-        <h2>checked!</h2>
+      <h2>
+        <img src="./assets/play-button.svg" alt="" /> these are radio-buttons
+      </h2>
+      <form class="checkboxes">
+        <input type="checkbox" name="checkbox" id="" />
+        <input type="checkbox" name="checkbox" id="" />
+        <input type="checkbox" name="checkbox" id="" />
+        <input type="checkbox" name="checkbox" id="" />
+        <input type="checkbox" name="checkbox" id="" />
+        <hr />
+        <input type="radio" name="checkbox" id="" />
+        <input type="radio" name="checkbox" id="" />
+        <input type="radio" name="checkbox" id="" />
+        <input type="radio" name="checkbox" id="" />
+        <input type="radio" name="checkbox" id="" />
+        <input type="radio" name="checkbox" id="" />
+      </form>
+    </section>
+    <div class="managing-state">
+      <h3>
+        These are basic HTML elements that have the ability to manage state on
+        your website
+      </h3>
+      <p>
+        When the you click on a checkbox, it gains the state of
+        <span>checked</span>. When it you click it again, it
+        <span>loses</span> that state
+      </p>
+      <p>
+        Radio buttons are a little different, where if they share the same
+        name, only one radio button can have the state of checked at a time
+      </p>
+    </div>
+  </section>
+  <section class="section section4" id="four">
+    <h2>
+      You can then use the pseudo-selector <span>:checked</span> to modify
+      elements when your checkbox is checked!
+    </h2>
+    <div class="s4cb-box">
+      <input type="checkbox" class="section4-checkbox" />
+      <h2>checked!</h2>
+    </div>
+    <div class="s4cb-box-2">
+      <input type="radio" name="rad1" class="radio1" />
+      <h2 class="s4cb-h2">r1 checked!</h2>
+      <input type="radio" name="rad1" class="radio2" />
+      <h2 class="s4cb-h2">r2 checked!</h2>
+      <input type="radio" name="rad1" class="radio3" />
+      <h2 class="s4cb-h2">r3 checked!</h2>
+      <input type="radio" name="rad1" class="radio4" />
+      <h2 class="s4cb-h2">r4 checked!</h2>
+      <input type="radio" name="rad1" class="radio5" />
+      <h2 class="s4cb-h2">r5 checked!</h2>
+    </div>
+    <div class="s4cb-screenshot">
+      <img src="./assets/ss1.png" class="ss1" alt="" />
+      <img src="./assets/ss2.png" class="ss2" alt="" />
+    </div>
+  </section>
+  <section class="section section5" id="five">
+    <section class="s5-header">
+      <h2>
+        You can modify <span>any</span> css property of child elements using
+        the internal state of checkboxes
+      </h2>
+      <input type="checkbox" id="thorcheck">
+      <div class="s5-box">
+        <img src="./assets/thor.jpg" alt="">
+        <img src="./assets/juicy.jpg" alt="">
       </div>
-      <div class="s4cb-box-2">
-        <input type="radio" name="rad1" class="radio1" />
-        <h2 class="s4cb-h2">r1 checked!</h2>
-        <input type="radio" name="rad1" class="radio2" />
-        <h2 class="s4cb-h2">r2 checked!</h2>
-        <input type="radio" name="rad1" class="radio3" />
-        <h2 class="s4cb-h2">r3 checked!</h2>
-        <input type="radio" name="rad1" class="radio4" />
-        <h2 class="s4cb-h2">r4 checked!</h2>
-        <input type="radio" name="rad1" class="radio5" />
-        <h2 class="s4cb-h2">r5 checked!</h2>
-      </div>
-      <div class="s4cb-screenshot">
-        <img src="./assets/ss1.png" class="ss1" alt="" />
-        <img src="./assets/ss2.png" class="ss2" alt="" />
+      <h2>
+        "But checkboxes are <span>ugly</span> and I doubt my user will want to click on them and think that the UX
+        isn't butt garbage"
+        -you, hopefully
+      </h2>
       </div>
     </section>
-    <section class="section section5">
-      <section class="s5-header">
-        <h1>
-          You can modify <span>any</span> css property of child elements using
-          the internal state of checkboxes
-        </h1>
-        </div>
-      </section>
-    </section>
-    <section class="section section6"></section>
-    <section class="section section7"></section>
-    <section class="section section8"></section>
-    <section class="section section9"></section>
-    <section class="section section10"><h1>(please clap)</h1></section>
-  </body>
+  </section>
+  <section class="section section6" id="six">
+    <h2>That's where LABELS come in. using the < label> HTML tag, and linking the label to a checkbox via it's ID,
+        <span>anything</span> can become a checkbox</h2>
+    <input type="checkbox" id="big-burger">
+    <label for="big-burger" class="s6burger">
+      <div class="patty"></div>
+      <div class="patty"></div>
+      <div class="patty"></div>
+    </label>
+    <div class="graham-box">
+      <h2 class="graham">Congrats Graham from 1806 for coming in 2nd at Demo night!</h2>
+    </div>
+    <div class="s6-ss">
+      <img class="smaller" src="./assets/rrrr.png" alt="">
+
+      <img src="./assets/grahambox.png" alt="">
+    </div>
+  </section>
+  <section class="s7-box" id="seven">
+    <div>
+      <h2>
+        and lastly for today, since we're using a label for our checkbox, we can just use the CSS property: display:
+        none on the checkbox itself, and hide it from the page without losing functionality!
+      </h2>
+    </div>
+    </div>
+  </section>
+  <section class="s8-box" id="eight">
+    <h1>visit github.com/30ozsteak for more examples!</h1>
+    <h2>(please clap)</h2>
+  </section>
+</body>
+
 </html>

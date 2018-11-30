@@ -7,6 +7,7 @@
 
 body .section {
   height: 100vh;
+  overflow: hidden;
 }
 
 .section1 h1:first-child {
@@ -19,15 +20,34 @@ body .section {
   text-transform: lowercase;
 }
 
-#check {
-  display: none;
+.please {
+  opacity: 0;
+  position: fixed;
 }
 
-#check:checked + .🍔 {
+#check:checked + .hhh {
   height: 45rem;
 }
 
-.🍔 {
+#check:checked + .hhh div:first-child {
+  transform: rotate(45deg);
+  margin-top: 10px;
+}
+
+#check:checked + .hhh div:nth-child(2) {
+  transform: rotate(-45deg);
+  margin-top: -8px;
+}
+
+#check:checked + .hhh div:nth-child(3) {
+  opacity: 0;
+}
+
+#check:checked + .hhh div {
+  transform: rotate(360deg);
+}
+
+.hhh {
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -35,20 +55,20 @@ body .section {
   top: 1rem;
   background-color: rgba(0, 0, 0, 0.719);
   padding: 0.6rem;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
-.🍔:hover {
-  cursor: pointer;
-}
-
-.🍔 div {
+.hhh div {
   width: 100%;
   height: 2px;
   background-color: white;
   margin: 0.4rem 0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.438);
-  transition: 0.2s;
+  transition: 0.4s;
+}
+
+#check:checked .hhh {
+  height: 35rem;
 }
 
 .🍔:hover div {
@@ -58,6 +78,35 @@ body .section {
 .section2 h1:first-child {
   margin-top: 19rem;
   line-height: 10rem;
+}
+
+/* ! nav ! */
+
+#check:checked ~ .hhh .nav a {
+  opacity: 1;
+}
+
+.nav {
+  list-style-type: none;
+}
+
+.nav li {
+  margin: 2rem 0;
+  padding: 0.6rem;
+}
+
+.nav a {
+  color: gray;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.nav a:hover {
+  color: white;
 }
 
 /* ! section3 ! */
@@ -252,24 +301,143 @@ body .section {
   border: 2px solid black;
 }
 
+.s5-box {
+  display: flex;
+}
+
+.s5-header {
+  text-align: center;
+}
+
 .s5-box img {
-  margin: 1rem 0 0 15rem;
-  width: 30rem;
-  height: 15rem;
+  margin: 1rem auto;
+  width: 35rem;
+  height: 20rem;
   opacity: 50%;
+  position: relative;
 }
 
-#check {
-  margin: 5rem;
-  border: 2px solid red;
-  box-sizing: border-box;
-  width: 2rem !important;
-  padding: 5rem;
+#thorcheck:checked + .s5-box img {
+  animation: unicorn 0.9s linear infinite, shake 1s infinite;
+}
+
+@keyframes shake {
+  0% {
+    bottom: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    bottom: 1rem;
+    transform: rotate(180);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes unicorn {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ! section 6 ! */
+
+.section6 {
+  height: 100vh;
+  text-align: center;
+}
+
+.section6 h2 {
+  text-align: center;
+  width: 40rem;
+  margin: 0 auto;
+}
+
+.s6burger {
+  width: 15rem;
+  height: 15rem;
   position: absolute;
-  transform: scale(1.5);
-  display: block;
+  margin-top: 8rem;
+  left: 15rem;
+  transition: 0.3s;
 }
 
-.s5-header h1 {
-  font-size: 7rem;
+.patty {
+  width: 100%;
+  height: 20px;
+  margin: 3rem 0;
+  background-color: black;
+  transition: 0.5s;
+  position: relative;
+}
+
+#big-burger:checked + .s6burger .patty:first-child {
+  transform: rotate(45deg);
+  top: 2rem;
+}
+
+#big-burger:checked + .s6burger .patty:nth-child(2) {
+  transform: rotate(-45deg);
+  bottom: 2rem;
+}
+
+#big-burger:checked + .s6burger .patty:nth-child(3) {
+  opacity: 0;
+}
+
+#big-burger:checked + .s6burger {
+  transform: scaleX(-1);
+}
+
+.graham-box {
+  margin-top: 13rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.graham {
+  position: absolute;
+  right: 15rem;
+}
+
+#big-burger:checked ~ .graham-box {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.s6-ss img {
+  margin-left: 2rem;
+  width: 30rem;
+  height: 20rem;
+}
+
+#big-burger:checked ~ .s6-ss img {
+  display: none;
+}
+
+.s7-box {
+  height: 100vh;
+}
+
+.smaller {
+  height: 10rem !important;
+  width: 10rem;
+}
+
+.s7-box div h2 {
+  width: 30rem;
+  text-align: center;
+  margin: 10rem auto 0;
+  padding-top: 10rem;
+}
+
+.s8-box {
+  height: 100vh;
+  font-size: 4.6rem;
+}
+
+.s8-box h2 {
+  margin-top: 15rem;
 }
