@@ -8,6 +8,8 @@
 body .section {
   height: 100vh;
   overflow: hidden;
+  background-color: white;
+  transition: .3s;
 }
 
 .section1 h1:first-child {
@@ -25,25 +27,25 @@ body .section {
   position: fixed;
 }
 
-#check:checked + .hhh {
+#check:checked+.hhh {
   height: 45rem;
 }
 
-#check:checked + .hhh div:first-child {
+#check:checked+.hhh div:first-child {
   transform: rotate(45deg);
   margin-top: 10px;
 }
 
-#check:checked + .hhh div:nth-child(2) {
+#check:checked+.hhh div:nth-child(2) {
   transform: rotate(-45deg);
   margin-top: -8px;
 }
 
-#check:checked + .hhh div:nth-child(3) {
+#check:checked+.hhh div:nth-child(3) {
   opacity: 0;
 }
 
-#check:checked + .hhh div {
+#check:checked+.hhh div {
   transform: rotate(360deg);
 }
 
@@ -53,9 +55,12 @@ body .section {
   position: fixed;
   right: 1rem;
   top: 1rem;
-  background-color: rgba(0, 0, 0, 0.719);
+  background-color: rgb(0, 0, 0);
   padding: 0.6rem;
   transition: 0.4s;
+  cursor: pointer;
+  z-index: 30;
+
 }
 
 .hhh div {
@@ -65,6 +70,7 @@ body .section {
   margin: 0.4rem 0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.438);
   transition: 0.4s;
+
 }
 
 #check:checked .hhh {
@@ -80,9 +86,16 @@ body .section {
   line-height: 10rem;
 }
 
+.section2 span {
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  margin-bottom: 2rem;
+}
+
 /* ! nav ! */
 
-#check:checked ~ .hhh .nav a {
+#check:checked~.hhh .nav a {
   opacity: 1;
 }
 
@@ -101,7 +114,7 @@ body .section {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-decoration: none;
   font-size: 1.5rem;
-  transition: 0.2s;
+  transition: 0.5s;
   opacity: 0;
 }
 
@@ -109,11 +122,27 @@ body .section {
   color: white;
 }
 
+.nav p {
+  position: absolute;
+  left: 5rem;
+  margin-bottom: -6rem;
+  transition: .5s;
+  opacity: 0;
+  color: white;
+  width: 10rem;
+  background-color: black;
+  padding: 1rem;
+}
+
+.nav li:hover p {
+  left: -10rem;
+  opacity: 1;
+}
+
 /* ! section3 ! */
 
 .section3 {
   width: 100vw;
-  border: 1px solid red;
 }
 
 .checkboxes {
@@ -212,12 +241,8 @@ body .section {
   bottom: -3.5rem;
 }
 
-.section4-checkbox:checked + h2 {
+.section4-checkbox:checked+h2 {
   opacity: 1;
-}
-
-.section4 {
-  border: 1px solid blue;
 }
 
 .section4 h2 {
@@ -260,31 +285,27 @@ body .section {
   display: inline-block;
 }
 
-.radio1:checked + h2 {
+.radio1:checked+h2 {
   opacity: 1;
 }
 
-.radio2:checked + h2 {
+.radio2:checked+h2 {
   opacity: 1;
 }
 
-.radio3:checked + h2 {
+.radio3:checked+h2 {
   opacity: 1;
 }
 
-.radio4:checked + h2 {
+.radio4:checked+h2 {
   opacity: 1;
 }
 
-.radio5:checked + h2 {
+.radio5:checked+h2 {
   opacity: 1;
 }
 
 /* ! section 5 ! */
-
-.section5 {
-  border: 2px solid green;
-}
 
 .s5-header h2 {
   text-align: center;
@@ -317,7 +338,7 @@ body .section {
   position: relative;
 }
 
-#thorcheck:checked + .s5-box img {
+#thorcheck:checked+.s5-box img {
   animation: unicorn 0.9s linear infinite, shake 1s infinite;
 }
 
@@ -326,10 +347,12 @@ body .section {
     bottom: 0;
     transform: rotate(0deg);
   }
+
   50% {
     bottom: 1rem;
     transform: rotate(180);
   }
+
   100% {
     bottom: 0;
     transform: rotate(360deg);
@@ -373,21 +396,21 @@ body .section {
   position: relative;
 }
 
-#big-burger:checked + .s6burger .patty:first-child {
+#big-burger:checked+.s6burger .patty:first-child {
   transform: rotate(45deg);
   top: 2rem;
 }
 
-#big-burger:checked + .s6burger .patty:nth-child(2) {
+#big-burger:checked+.s6burger .patty:nth-child(2) {
   transform: rotate(-45deg);
   bottom: 2rem;
 }
 
-#big-burger:checked + .s6burger .patty:nth-child(3) {
+#big-burger:checked+.s6burger .patty:nth-child(3) {
   opacity: 0;
 }
 
-#big-burger:checked + .s6burger {
+#big-burger:checked+.s6burger {
   transform: scaleX(-1);
 }
 
@@ -402,7 +425,7 @@ body .section {
   right: 15rem;
 }
 
-#big-burger:checked ~ .graham-box {
+#big-burger:checked~.graham-box {
   opacity: 1;
   transform: scale(1.5);
 }
@@ -413,7 +436,7 @@ body .section {
   height: 20rem;
 }
 
-#big-burger:checked ~ .s6-ss img {
+#big-burger:checked~.s6-ss img {
   display: none;
 }
 
@@ -440,4 +463,49 @@ body .section {
 
 .s8-box h2 {
   margin-top: 15rem;
+}
+
+.clap {
+  animation: 🦄 0.5s linear infinite;
+  color: rgb(103, 103, 255);
+}
+
+@keyframes 🦄 {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.moon {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
+  z-index: 500;
+}
+
+#dark {
+  display: none;
+}
+
+#dark:checked~.giant-container~section {
+  filter: invert(1);
+}
+
+#dark:checked~.giant-container~section img {
+  filter: invert(1) !important;
+}
+
+#dark:checked+.darkbox img {
+  filter: invert(1);
+}
+
+.s8-box p {
+  font-size: .5rem;
 }
