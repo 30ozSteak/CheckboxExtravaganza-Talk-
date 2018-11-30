@@ -7,7 +7,6 @@
 
 body .section {
   height: 100vh;
-  overflow: hidden;
 }
 
 .section1 h1:first-child {
@@ -20,6 +19,14 @@ body .section {
   text-transform: lowercase;
 }
 
+#check {
+  display: none;
+}
+
+#check:checked + .🍔 {
+  height: 45rem;
+}
+
 .🍔 {
   width: 2rem;
   height: 2rem;
@@ -28,6 +35,7 @@ body .section {
   top: 1rem;
   background-color: rgba(0, 0, 0, 0.719);
   padding: 0.6rem;
+  transition: 0.7s;
 }
 
 .🍔:hover {
@@ -240,12 +248,28 @@ body .section {
   font-weight: 800;
 }
 
-.s5-box img {
-  margin: 6rem auto;
-  width: 30rem;
-  height: 15rem;
+.input-boxxx {
+  border: 2px solid black;
 }
 
-.s5-box input {
-  border: 5px solid black;
+.s5-box img {
+  margin: 1rem 0 0 15rem;
+  width: 30rem;
+  height: 15rem;
+  opacity: 50%;
+}
+
+#check {
+  margin: 5rem;
+  border: 2px solid red;
+  box-sizing: border-box;
+  width: 2rem !important;
+  padding: 5rem;
+  position: absolute;
+  transform: scale(1.5);
+  display: block;
+}
+
+.s5-header h1 {
+  font-size: 7rem;
 }
